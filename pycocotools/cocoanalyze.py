@@ -269,12 +269,12 @@ class COCOanalyze:
                     vs = np.array(a['keypoints'][2::3])
                     inv_vs = vs[self.params.inv_idx]
 
-                    keypoints     = np.insert(ys.astype(np.float),
+                    keypoints     = np.insert(ys.astype(np.float64),
                                               np.arange(self.params.num_kpts),
-                                              xs.astype(np.float))
-                    inv_keypoints = np.insert(ys[self.params.inv_idx].astype(np.float),
+                                              xs.astype(np.float64))
+                    inv_keypoints = np.insert(ys[self.params.inv_idx].astype(np.float64),
                                               np.arange(self.params.num_kpts),
-                                              xs[self.params.inv_idx].astype(np.float))
+                                              xs[self.params.inv_idx].astype(np.float64))
 
                     if a['id']==gt['id']:
                         # if current annotation is the ground truth match
